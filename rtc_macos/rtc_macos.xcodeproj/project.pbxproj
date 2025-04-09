@@ -1,0 +1,731 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96DE86362D81832200A2C787 /* sioclientConfig.cmake in Resources */ = {isa = PBXBuildFile; fileRef = 96DE862A2D81832200A2C787 /* sioclientConfig.cmake */; };
+		96DE86372D81832200A2C787 /* sioclientConfigVersion.cmake in Resources */ = {isa = PBXBuildFile; fileRef = 96DE862B2D81832200A2C787 /* sioclientConfigVersion.cmake */; };
+		96DE86382D81832200A2C787 /* sioclientTargets-release.cmake in Resources */ = {isa = PBXBuildFile; fileRef = 96DE862C2D81832200A2C787 /* sioclientTargets-release.cmake */; };
+		96DE86392D81832200A2C787 /* sioclientTargets.cmake in Resources */ = {isa = PBXBuildFile; fileRef = 96DE862D2D81832200A2C787 /* sioclientTargets.cmake */; };
+		96DE863A2D81832200A2C787 /* libsioclient_tls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DE86302D81832200A2C787 /* libsioclient_tls.a */; };
+		96DE863B2D81832200A2C787 /* libsioclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DE86312D81832200A2C787 /* libsioclient.a */; };
+		96DE863C2D81832200A2C787 /* build.sh in Resources */ = {isa = PBXBuildFile; fileRef = 96DE86342D81832200A2C787 /* build.sh */; };
+		96DE86452D818E4D00A2C787 /* SocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DE86442D818E4D00A2C787 /* SocketClient.swift */; };
+		96DE86522D81958400A2C787 /* ARDUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE86472D81958400A2C787 /* ARDUtilities.m */; };
+		96DE86532D81958400A2C787 /* ARDCaptureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE864A2D81958400A2C787 /* ARDCaptureController.m */; };
+		96DE86542D81958400A2C787 /* ARDSettingsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE864C2D81958400A2C787 /* ARDSettingsModel.m */; };
+		96DE86552D81958400A2C787 /* ARDSettingsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE864F2D81958400A2C787 /* ARDSettingsStore.m */; };
+		96DE865D2D81990600A2C787 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96DE865C2D81990600A2C787 /* Info.plist */; };
+		96DE86652D819B2000A2C787 /* RTCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE865F2D819B2000A2C787 /* RTCAppDelegate.m */; };
+		96DE86662D819B2000A2C787 /* RTCCameraConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE86612D819B2000A2C787 /* RTCCameraConsumer.m */; };
+		96DE86672D819B2000A2C787 /* RTCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE86632D819B2000A2C787 /* RTCViewController.m */; };
+		96DE866D2D819B3B00A2C787 /* JHLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE86692D819B3B00A2C787 /* JHLabel.m */; };
+		96DE866E2D819B3B00A2C787 /* RTCSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE866B2D819B3B00A2C787 /* RTCSlideView.m */; };
+		96DE86742D819B6500A2C787 /* RTCEngineNative.mm in Sources */ = {isa = PBXBuildFile; fileRef = 96DE86702D819B6500A2C787 /* RTCEngineNative.mm */; };
+		96DE867C2D819E0500A2C787 /* RtcAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE867B2D819E0500A2C787 /* RtcAnswer.m */; };
+		96DE86852D81D2D100A2C787 /* RtcOffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE86842D81D2D100A2C787 /* RtcOffer.m */; };
+		96DE86F32D84158C00A2C787 /* ChatRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE86F22D84158C00A2C787 /* ChatRoomController.m */; };
+		96DE86F82D8A9D4B00A2C787 /* WebRTCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE86F72D8A9D4B00A2C787 /* WebRTCManager.m */; };
+		96DE86FB2D8A9DB700A2C787 /* WebSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE86FA2D8A9DB700A2C787 /* WebSocketManager.m */; };
+		96DE86FE2D8A9E5200A2C787 /* PeerConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE86FD2D8A9E5200A2C787 /* PeerConnectionManager.m */; };
+		96DE87112D8BBB1600A2C787 /* SignalingMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE87102D8BBB1600A2C787 /* SignalingMessage.m */; };
+		96DE87142D8BBB5900A2C787 /* OfferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE87132D8BBB5900A2C787 /* OfferManager.m */; };
+		96DE87172D8BBB9600A2C787 /* AnswerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE87162D8BBB9600A2C787 /* AnswerManager.m */; };
+		96F6680E2D7D3C6800FB1101 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F6680D2D7D3C6800FB1101 /* AppDelegate.m */; };
+		96F668112D7D3C6800FB1101 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F668102D7D3C6800FB1101 /* ViewController.m */; };
+		96F668132D7D3C6900FB1101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F668122D7D3C6900FB1101 /* Assets.xcassets */; };
+		96F668162D7D3C6900FB1101 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 96F668152D7D3C6900FB1101 /* Base */; };
+		96F668182D7D3C6900FB1101 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F668172D7D3C6900FB1101 /* main.m */; };
+		96F668202D7D3C7600FB1101 /* WebRTC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F6681F2D7D3C7600FB1101 /* WebRTC.xcframework */; };
+		96F668222D7D3D1B00FB1101 /* webrtc.tutorial in Resources */ = {isa = PBXBuildFile; fileRef = 96F668212D7D3D1B00FB1101 /* webrtc.tutorial */; };
+		A30013BE23E1278947E73666 /* Pods_rtc_macos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E1ED24207964717EB4ABCE /* Pods_rtc_macos.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		268B47BF083D86DCC433730F /* Pods-rtc_macos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rtc_macos.release.xcconfig"; path = "Target Support Files/Pods-rtc_macos/Pods-rtc_macos.release.xcconfig"; sourceTree = "<group>"; };
+		4255CF926C7AB415C275EE8A /* Pods-rtc_macos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rtc_macos.debug.xcconfig"; path = "Target Support Files/Pods-rtc_macos/Pods-rtc_macos.debug.xcconfig"; sourceTree = "<group>"; };
+		96DE86262D81832200A2C787 /* sio_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sio_client.h; sourceTree = "<group>"; };
+		96DE86272D81832200A2C787 /* sio_message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sio_message.h; sourceTree = "<group>"; };
+		96DE86282D81832200A2C787 /* sio_socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sio_socket.h; sourceTree = "<group>"; };
+		96DE862A2D81832200A2C787 /* sioclientConfig.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sioclientConfig.cmake; sourceTree = "<group>"; };
+		96DE862B2D81832200A2C787 /* sioclientConfigVersion.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sioclientConfigVersion.cmake; sourceTree = "<group>"; };
+		96DE862C2D81832200A2C787 /* sioclientTargets-release.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sioclientTargets-release.cmake"; sourceTree = "<group>"; };
+		96DE862D2D81832200A2C787 /* sioclientTargets.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sioclientTargets.cmake; sourceTree = "<group>"; };
+		96DE86302D81832200A2C787 /* libsioclient_tls.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsioclient_tls.a; sourceTree = "<group>"; };
+		96DE86312D81832200A2C787 /* libsioclient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsioclient.a; sourceTree = "<group>"; };
+		96DE86342D81832200A2C787 /* build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
+		96DE86432D818E4C00A2C787 /* rtc_macos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rtc_macos-Bridging-Header.h"; sourceTree = "<group>"; };
+		96DE86442D818E4D00A2C787 /* SocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketClient.swift; sourceTree = "<group>"; };
+		96DE86462D81958400A2C787 /* ARDUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDUtilities.h; sourceTree = "<group>"; };
+		96DE86472D81958400A2C787 /* ARDUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDUtilities.m; sourceTree = "<group>"; };
+		96DE86492D81958400A2C787 /* ARDCaptureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDCaptureController.h; sourceTree = "<group>"; };
+		96DE864A2D81958400A2C787 /* ARDCaptureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDCaptureController.m; sourceTree = "<group>"; };
+		96DE864B2D81958400A2C787 /* ARDSettingsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDSettingsModel.h; sourceTree = "<group>"; };
+		96DE864C2D81958400A2C787 /* ARDSettingsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDSettingsModel.m; sourceTree = "<group>"; };
+		96DE864D2D81958400A2C787 /* ARDSettingsModel+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ARDSettingsModel+Private.h"; sourceTree = "<group>"; };
+		96DE864E2D81958400A2C787 /* ARDSettingsStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDSettingsStore.h; sourceTree = "<group>"; };
+		96DE864F2D81958400A2C787 /* ARDSettingsStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDSettingsStore.m; sourceTree = "<group>"; };
+		96DE865C2D81990600A2C787 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96DE865E2D819B2000A2C787 /* RTCAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCAppDelegate.h; sourceTree = "<group>"; };
+		96DE865F2D819B2000A2C787 /* RTCAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCAppDelegate.m; sourceTree = "<group>"; };
+		96DE86602D819B2000A2C787 /* RTCCameraConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCCameraConsumer.h; sourceTree = "<group>"; };
+		96DE86612D819B2000A2C787 /* RTCCameraConsumer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCCameraConsumer.m; sourceTree = "<group>"; };
+		96DE86622D819B2000A2C787 /* RTCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCViewController.h; sourceTree = "<group>"; };
+		96DE86632D819B2000A2C787 /* RTCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCViewController.m; sourceTree = "<group>"; };
+		96DE86682D819B3B00A2C787 /* JHLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHLabel.h; sourceTree = "<group>"; };
+		96DE86692D819B3B00A2C787 /* JHLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHLabel.m; sourceTree = "<group>"; };
+		96DE866A2D819B3B00A2C787 /* RTCSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCSlideView.h; sourceTree = "<group>"; };
+		96DE866B2D819B3B00A2C787 /* RTCSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCSlideView.m; sourceTree = "<group>"; };
+		96DE866F2D819B6500A2C787 /* RTCEngineNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCEngineNative.h; sourceTree = "<group>"; };
+		96DE86702D819B6500A2C787 /* RTCEngineNative.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTCEngineNative.mm; sourceTree = "<group>"; };
+		96DE867A2D819E0500A2C787 /* RtcAnswer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RtcAnswer.h; sourceTree = "<group>"; };
+		96DE867B2D819E0500A2C787 /* RtcAnswer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RtcAnswer.m; sourceTree = "<group>"; };
+		96DE86832D81D2D100A2C787 /* RtcOffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RtcOffer.h; sourceTree = "<group>"; };
+		96DE86842D81D2D100A2C787 /* RtcOffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RtcOffer.m; sourceTree = "<group>"; };
+		96DE86F12D84158C00A2C787 /* ChatRoomController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatRoomController.h; sourceTree = "<group>"; };
+		96DE86F22D84158C00A2C787 /* ChatRoomController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatRoomController.m; sourceTree = "<group>"; };
+		96DE86F62D8A9D4B00A2C787 /* WebRTCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebRTCManager.h; sourceTree = "<group>"; };
+		96DE86F72D8A9D4B00A2C787 /* WebRTCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebRTCManager.m; sourceTree = "<group>"; };
+		96DE86F92D8A9DB700A2C787 /* WebSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebSocketManager.h; sourceTree = "<group>"; };
+		96DE86FA2D8A9DB700A2C787 /* WebSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebSocketManager.m; sourceTree = "<group>"; };
+		96DE86FC2D8A9E5200A2C787 /* PeerConnectionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeerConnectionManager.h; sourceTree = "<group>"; };
+		96DE86FD2D8A9E5200A2C787 /* PeerConnectionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeerConnectionManager.m; sourceTree = "<group>"; };
+		96DE870F2D8BBB1600A2C787 /* SignalingMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignalingMessage.h; sourceTree = "<group>"; };
+		96DE87102D8BBB1600A2C787 /* SignalingMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignalingMessage.m; sourceTree = "<group>"; };
+		96DE87122D8BBB5900A2C787 /* OfferManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OfferManager.h; sourceTree = "<group>"; };
+		96DE87132D8BBB5900A2C787 /* OfferManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OfferManager.m; sourceTree = "<group>"; };
+		96DE87152D8BBB9600A2C787 /* AnswerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnswerManager.h; sourceTree = "<group>"; };
+		96DE87162D8BBB9600A2C787 /* AnswerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnswerManager.m; sourceTree = "<group>"; };
+		96F668092D7D3C6800FB1101 /* rtc_macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rtc_macos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96F6680C2D7D3C6800FB1101 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		96F6680D2D7D3C6800FB1101 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		96F6680F2D7D3C6800FB1101 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		96F668102D7D3C6800FB1101 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		96F668122D7D3C6900FB1101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96F668152D7D3C6900FB1101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96F668172D7D3C6900FB1101 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96F668192D7D3C6A00FB1101 /* rtc_macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rtc_macos.entitlements; sourceTree = "<group>"; };
+		96F6681F2D7D3C7600FB1101 /* WebRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = WebRTC.xcframework; sourceTree = "<group>"; };
+		96F668212D7D3D1B00FB1101 /* webrtc.tutorial */ = {isa = PBXFileReference; lastKnownFileType = text; path = webrtc.tutorial; sourceTree = "<group>"; };
+		D2E1ED24207964717EB4ABCE /* Pods_rtc_macos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rtc_macos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96F668062D7D3C6800FB1101 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96DE863A2D81832200A2C787 /* libsioclient_tls.a in Frameworks */,
+				96F668202D7D3C7600FB1101 /* WebRTC.xcframework in Frameworks */,
+				96DE863B2D81832200A2C787 /* libsioclient.a in Frameworks */,
+				A30013BE23E1278947E73666 /* Pods_rtc_macos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A0641FD4A821CE85ED4ADE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2E1ED24207964717EB4ABCE /* Pods_rtc_macos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6ED084B48E38EEBE5BBB6C4A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4255CF926C7AB415C275EE8A /* Pods-rtc_macos.debug.xcconfig */,
+				268B47BF083D86DCC433730F /* Pods-rtc_macos.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		96DE86292D81832200A2C787 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				96DE86262D81832200A2C787 /* sio_client.h */,
+				96DE86272D81832200A2C787 /* sio_message.h */,
+				96DE86282D81832200A2C787 /* sio_socket.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		96DE862E2D81832200A2C787 /* sioclient */ = {
+			isa = PBXGroup;
+			children = (
+				96DE862A2D81832200A2C787 /* sioclientConfig.cmake */,
+				96DE862B2D81832200A2C787 /* sioclientConfigVersion.cmake */,
+				96DE862C2D81832200A2C787 /* sioclientTargets-release.cmake */,
+				96DE862D2D81832200A2C787 /* sioclientTargets.cmake */,
+			);
+			path = sioclient;
+			sourceTree = "<group>";
+		};
+		96DE862F2D81832200A2C787 /* cmake */ = {
+			isa = PBXGroup;
+			children = (
+				96DE862E2D81832200A2C787 /* sioclient */,
+			);
+			path = cmake;
+			sourceTree = "<group>";
+		};
+		96DE86322D81832200A2C787 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				96DE862F2D81832200A2C787 /* cmake */,
+				96DE86302D81832200A2C787 /* libsioclient_tls.a */,
+				96DE86312D81832200A2C787 /* libsioclient.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		96DE86332D81832200A2C787 /* deploy */ = {
+			isa = PBXGroup;
+			children = (
+				96DE86292D81832200A2C787 /* include */,
+				96DE86322D81832200A2C787 /* lib */,
+			);
+			path = deploy;
+			sourceTree = "<group>";
+		};
+		96DE86352D81832200A2C787 /* socketio */ = {
+			isa = PBXGroup;
+			children = (
+				96DE86332D81832200A2C787 /* deploy */,
+				96DE86342D81832200A2C787 /* build.sh */,
+			);
+			path = socketio;
+			sourceTree = "<group>";
+		};
+		96DE86482D81958400A2C787 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				96DE86462D81958400A2C787 /* ARDUtilities.h */,
+				96DE86472D81958400A2C787 /* ARDUtilities.m */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		96DE86502D81958400A2C787 /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				96DE86492D81958400A2C787 /* ARDCaptureController.h */,
+				96DE864A2D81958400A2C787 /* ARDCaptureController.m */,
+				96DE864B2D81958400A2C787 /* ARDSettingsModel.h */,
+				96DE864C2D81958400A2C787 /* ARDSettingsModel.m */,
+				96DE864D2D81958400A2C787 /* ARDSettingsModel+Private.h */,
+				96DE864E2D81958400A2C787 /* ARDSettingsStore.h */,
+				96DE864F2D81958400A2C787 /* ARDSettingsStore.m */,
+			);
+			path = mac;
+			sourceTree = "<group>";
+		};
+		96DE86512D81958400A2C787 /* device */ = {
+			isa = PBXGroup;
+			children = (
+				96DE86482D81958400A2C787 /* common */,
+				96DE86502D81958400A2C787 /* mac */,
+			);
+			path = device;
+			sourceTree = "<group>";
+		};
+		96DE86642D819B2000A2C787 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				96F6680F2D7D3C6800FB1101 /* ViewController.h */,
+				96F668102D7D3C6800FB1101 /* ViewController.m */,
+				96DE86732D819B6500A2C787 /* native */,
+				96DE866C2D819B3B00A2C787 /* view */,
+				96DE86512D81958400A2C787 /* device */,
+				96DE865E2D819B2000A2C787 /* RTCAppDelegate.h */,
+				96DE865F2D819B2000A2C787 /* RTCAppDelegate.m */,
+				96DE86602D819B2000A2C787 /* RTCCameraConsumer.h */,
+				96DE86612D819B2000A2C787 /* RTCCameraConsumer.m */,
+				96DE86622D819B2000A2C787 /* RTCViewController.h */,
+				96DE86632D819B2000A2C787 /* RTCViewController.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		96DE866C2D819B3B00A2C787 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				96DE86682D819B3B00A2C787 /* JHLabel.h */,
+				96DE86692D819B3B00A2C787 /* JHLabel.m */,
+				96DE866A2D819B3B00A2C787 /* RTCSlideView.h */,
+				96DE866B2D819B3B00A2C787 /* RTCSlideView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		96DE86732D819B6500A2C787 /* native */ = {
+			isa = PBXGroup;
+			children = (
+				96DE866F2D819B6500A2C787 /* RTCEngineNative.h */,
+				96DE86702D819B6500A2C787 /* RTCEngineNative.mm */,
+			);
+			path = native;
+			sourceTree = "<group>";
+		};
+		96DE86762D819DC600A2C787 /* rtc */ = {
+			isa = PBXGroup;
+			children = (
+				96DE867A2D819E0500A2C787 /* RtcAnswer.h */,
+				96DE867B2D819E0500A2C787 /* RtcAnswer.m */,
+				96DE86832D81D2D100A2C787 /* RtcOffer.h */,
+				96DE86842D81D2D100A2C787 /* RtcOffer.m */,
+				96DE86442D818E4D00A2C787 /* SocketClient.swift */,
+			);
+			path = rtc;
+			sourceTree = "<group>";
+		};
+		96DE87082D8AA05300A2C787 /* webrtc */ = {
+			isa = PBXGroup;
+			children = (
+				96DE86F12D84158C00A2C787 /* ChatRoomController.h */,
+				96DE86F22D84158C00A2C787 /* ChatRoomController.m */,
+				96DE86FC2D8A9E5200A2C787 /* PeerConnectionManager.h */,
+				96DE86FD2D8A9E5200A2C787 /* PeerConnectionManager.m */,
+				96DE86F62D8A9D4B00A2C787 /* WebRTCManager.h */,
+				96DE86F72D8A9D4B00A2C787 /* WebRTCManager.m */,
+				96DE86F92D8A9DB700A2C787 /* WebSocketManager.h */,
+				96DE86FA2D8A9DB700A2C787 /* WebSocketManager.m */,
+				96DE870F2D8BBB1600A2C787 /* SignalingMessage.h */,
+				96DE87102D8BBB1600A2C787 /* SignalingMessage.m */,
+				96DE87122D8BBB5900A2C787 /* OfferManager.h */,
+				96DE87132D8BBB5900A2C787 /* OfferManager.m */,
+				96DE87152D8BBB9600A2C787 /* AnswerManager.h */,
+				96DE87162D8BBB9600A2C787 /* AnswerManager.m */,
+			);
+			path = webrtc;
+			sourceTree = "<group>";
+		};
+		96F668002D7D3C6800FB1101 = {
+			isa = PBXGroup;
+			children = (
+				96F6680B2D7D3C6800FB1101 /* rtc_macos */,
+				96F6680A2D7D3C6800FB1101 /* Products */,
+				6ED084B48E38EEBE5BBB6C4A /* Pods */,
+				6A0641FD4A821CE85ED4ADE5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		96F6680A2D7D3C6800FB1101 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96F668092D7D3C6800FB1101 /* rtc_macos.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96F6680B2D7D3C6800FB1101 /* rtc_macos */ = {
+			isa = PBXGroup;
+			children = (
+				96DE87082D8AA05300A2C787 /* webrtc */,
+				96DE86762D819DC600A2C787 /* rtc */,
+				96DE86642D819B2000A2C787 /* view */,
+				96F6680C2D7D3C6800FB1101 /* AppDelegate.h */,
+				96F6680D2D7D3C6800FB1101 /* AppDelegate.m */,
+				96F668122D7D3C6900FB1101 /* Assets.xcassets */,
+				96F6684B2D7D3F9B00FB1101 /* fwk */,
+				96DE865C2D81990600A2C787 /* Info.plist */,
+				96F668172D7D3C6900FB1101 /* main.m */,
+				96F668142D7D3C6900FB1101 /* Main.storyboard */,
+				96DE86432D818E4C00A2C787 /* rtc_macos-Bridging-Header.h */,
+				96F668192D7D3C6A00FB1101 /* rtc_macos.entitlements */,
+				96F668212D7D3D1B00FB1101 /* webrtc.tutorial */,
+			);
+			path = rtc_macos;
+			sourceTree = "<group>";
+		};
+		96F6684B2D7D3F9B00FB1101 /* fwk */ = {
+			isa = PBXGroup;
+			children = (
+				96DE86352D81832200A2C787 /* socketio */,
+				96F6681F2D7D3C7600FB1101 /* WebRTC.xcframework */,
+			);
+			path = fwk;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96F668082D7D3C6800FB1101 /* rtc_macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96F6681C2D7D3C6A00FB1101 /* Build configuration list for PBXNativeTarget "rtc_macos" */;
+			buildPhases = (
+				220EE865AA4E1402FA04AECD /* [CP] Check Pods Manifest.lock */,
+				96F668052D7D3C6800FB1101 /* Sources */,
+				96F668062D7D3C6800FB1101 /* Frameworks */,
+				96F668072D7D3C6800FB1101 /* Resources */,
+				2CAF514CB79FC3FAC07D8E3E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = rtc_macos;
+			productName = rtc_macos;
+			productReference = 96F668092D7D3C6800FB1101 /* rtc_macos.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96F668012D7D3C6800FB1101 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					96F668082D7D3C6800FB1101 = {
+						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
+					};
+				};
+			};
+			buildConfigurationList = 96F668042D7D3C6800FB1101 /* Build configuration list for PBXProject "rtc_macos" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96F668002D7D3C6800FB1101;
+			productRefGroup = 96F6680A2D7D3C6800FB1101 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96F668082D7D3C6800FB1101 /* rtc_macos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96F668072D7D3C6800FB1101 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96DE86362D81832200A2C787 /* sioclientConfig.cmake in Resources */,
+				96DE863C2D81832200A2C787 /* build.sh in Resources */,
+				96DE865D2D81990600A2C787 /* Info.plist in Resources */,
+				96DE86372D81832200A2C787 /* sioclientConfigVersion.cmake in Resources */,
+				96F668132D7D3C6900FB1101 /* Assets.xcassets in Resources */,
+				96DE86382D81832200A2C787 /* sioclientTargets-release.cmake in Resources */,
+				96F668162D7D3C6900FB1101 /* Base in Resources */,
+				96F668222D7D3D1B00FB1101 /* webrtc.tutorial in Resources */,
+				96DE86392D81832200A2C787 /* sioclientTargets.cmake in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		220EE865AA4E1402FA04AECD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rtc_macos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CAF514CB79FC3FAC07D8E3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rtc_macos/Pods-rtc_macos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rtc_macos/Pods-rtc_macos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rtc_macos/Pods-rtc_macos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96F668052D7D3C6800FB1101 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96DE86742D819B6500A2C787 /* RTCEngineNative.mm in Sources */,
+				96F668112D7D3C6800FB1101 /* ViewController.m in Sources */,
+				96DE86652D819B2000A2C787 /* RTCAppDelegate.m in Sources */,
+				96DE867C2D819E0500A2C787 /* RtcAnswer.m in Sources */,
+				96DE86F32D84158C00A2C787 /* ChatRoomController.m in Sources */,
+				96DE866D2D819B3B00A2C787 /* JHLabel.m in Sources */,
+				96DE86452D818E4D00A2C787 /* SocketClient.swift in Sources */,
+				96DE86672D819B2000A2C787 /* RTCViewController.m in Sources */,
+				96DE86FE2D8A9E5200A2C787 /* PeerConnectionManager.m in Sources */,
+				96DE86552D81958400A2C787 /* ARDSettingsStore.m in Sources */,
+				96DE87142D8BBB5900A2C787 /* OfferManager.m in Sources */,
+				96DE86522D81958400A2C787 /* ARDUtilities.m in Sources */,
+				96F668182D7D3C6900FB1101 /* main.m in Sources */,
+				96DE86662D819B2000A2C787 /* RTCCameraConsumer.m in Sources */,
+				96DE866E2D819B3B00A2C787 /* RTCSlideView.m in Sources */,
+				96DE86FB2D8A9DB700A2C787 /* WebSocketManager.m in Sources */,
+				96DE86852D81D2D100A2C787 /* RtcOffer.m in Sources */,
+				96DE87112D8BBB1600A2C787 /* SignalingMessage.m in Sources */,
+				96DE86532D81958400A2C787 /* ARDCaptureController.m in Sources */,
+				96DE87172D8BBB9600A2C787 /* AnswerManager.m in Sources */,
+				96DE86F82D8A9D4B00A2C787 /* WebRTCManager.m in Sources */,
+				96F6680E2D7D3C6800FB1101 /* AppDelegate.m in Sources */,
+				96DE86542D81958400A2C787 /* ARDSettingsModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		96F668142D7D3C6900FB1101 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96F668152D7D3C6900FB1101 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96F6681A2D7D3C6A00FB1101 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		96F6681B2D7D3C6A00FB1101 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		96F6681D2D7D3C6A00FB1101 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4255CF926C7AB415C275EE8A /* Pods-rtc_macos.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = rtc_macos/rtc_macos.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/rtc_macos/fwk/socketio/deploy/include\"";
+				INFOPLIST_FILE = "$(PROJECT_DIR)/rtc_macos/Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rtc_macos/fwk/socketio/deploy/lib",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.webrtc.rtc-macos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "rtc_macos/rtc_macos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		96F6681E2D7D3C6A00FB1101 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 268B47BF083D86DCC433730F /* Pods-rtc_macos.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = rtc_macos/rtc_macos.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/rtc_macos/fwk/socketio/deploy/include\"";
+				INFOPLIST_FILE = "$(PROJECT_DIR)/rtc_macos/Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rtc_macos/fwk/socketio/deploy/lib",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.webrtc.rtc-macos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "rtc_macos/rtc_macos-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96F668042D7D3C6800FB1101 /* Build configuration list for PBXProject "rtc_macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96F6681A2D7D3C6A00FB1101 /* Debug */,
+				96F6681B2D7D3C6A00FB1101 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96F6681C2D7D3C6A00FB1101 /* Build configuration list for PBXNativeTarget "rtc_macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96F6681D2D7D3C6A00FB1101 /* Debug */,
+				96F6681E2D7D3C6A00FB1101 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96F668012D7D3C6800FB1101 /* Project object */;
+}

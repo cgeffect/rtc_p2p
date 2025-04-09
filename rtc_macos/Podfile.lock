@@ -1,0 +1,24 @@
+PODS:
+  - PureLayout (3.1.9)
+  - Socket.IO-Client-Swift (16.1.1):
+    - Starscream (~> 4.0.8)
+  - Starscream (4.0.8)
+
+DEPENDENCIES:
+  - PureLayout
+  - Socket.IO-Client-Swift (~> 16.1.1)
+
+SPEC REPOS:
+  trunk:
+    - PureLayout
+    - Socket.IO-Client-Swift
+    - Starscream
+
+SPEC CHECKSUMS:
+  PureLayout: 5fb5e5429519627d60d079ccb1eaa7265ce7cf88
+  Socket.IO-Client-Swift: 3614bea82ba005df1c2ff01154f4004993e05ad7
+  Starscream: 19b5533ddb925208db698f0ac508a100b884a1b9
+
+PODFILE CHECKSUM: 3e8c707c5dfcb28e564eb3ef25d3a320fd75d1c9
+
+COCOAPODS: 1.16.2

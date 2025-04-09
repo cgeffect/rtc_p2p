@@ -1,0 +1,4 @@
+
+https://github.com/socketio/socket.io-client-cpp
+
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=./deploy -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET="11.0" -DCMAKE_POSITION_INDEPENDENT_CODE=ON ..

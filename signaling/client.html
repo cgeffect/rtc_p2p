@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.IO Client</title>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script>
+        const socket = io('http://localhost:3000');
+
+        // 监听服务器的 serverResponse 事件
+        socket.on('offer', (message) => {
+            console.log('收到服务器的回复:', message);
+        });
+
+        // 发送 answer 消息给服务器
+        socket.emit('answer', '这是客户端的 answer 消息');
+    </script>
+</body>
+
+</html>
