@@ -60,7 +60,7 @@
     _slideView = [[RTCSlideView alloc] initWithFrame:CGRectMake(0, 0, 100, self.view.frame.size.height)];
     _slideView.delegate = self;
     _slideView.wantsLayer = YES;
-    _slideView.layer.backgroundColor = [NSColor lightGrayColor].CGColor;
+    _slideView.layer.backgroundColor = [NSColor darkGrayColor].CGColor;
     [self.view addSubview:_slideView];
     
     _localVideoView = [[RTC_OBJC_TYPE(RTCMTLNSVideoView) alloc] initWithFrame:CGRectMake(100, 0, self.view.frame.size.width - 100, self.view.frame.size.height)];

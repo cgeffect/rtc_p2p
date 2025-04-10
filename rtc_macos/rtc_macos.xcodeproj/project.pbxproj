@@ -25,7 +25,6 @@
 		96DE86672D819B2000A2C787 /* RTCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE86632D819B2000A2C787 /* RTCViewController.m */; };
 		96DE866D2D819B3B00A2C787 /* JHLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE86692D819B3B00A2C787 /* JHLabel.m */; };
 		96DE866E2D819B3B00A2C787 /* RTCSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE866B2D819B3B00A2C787 /* RTCSlideView.m */; };
-		96DE86742D819B6500A2C787 /* RTCEngineNative.mm in Sources */ = {isa = PBXBuildFile; fileRef = 96DE86702D819B6500A2C787 /* RTCEngineNative.mm */; };
 		96DE867C2D819E0500A2C787 /* RtcAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE867B2D819E0500A2C787 /* RtcAnswer.m */; };
 		96DE86852D81D2D100A2C787 /* RtcOffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE86842D81D2D100A2C787 /* RtcOffer.m */; };
 		96DE86F32D84158C00A2C787 /* ChatRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE86F22D84158C00A2C787 /* ChatRoomController.m */; };
@@ -35,8 +34,6 @@
 		96DE87112D8BBB1600A2C787 /* SignalingMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE87102D8BBB1600A2C787 /* SignalingMessage.m */; };
 		96DE87142D8BBB5900A2C787 /* OfferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE87132D8BBB5900A2C787 /* OfferManager.m */; };
 		96DE87172D8BBB9600A2C787 /* AnswerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE87162D8BBB9600A2C787 /* AnswerManager.m */; };
-		96F6680E2D7D3C6800FB1101 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F6680D2D7D3C6800FB1101 /* AppDelegate.m */; };
-		96F668112D7D3C6800FB1101 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F668102D7D3C6800FB1101 /* ViewController.m */; };
 		96F668132D7D3C6900FB1101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F668122D7D3C6900FB1101 /* Assets.xcassets */; };
 		96F668162D7D3C6900FB1101 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 96F668152D7D3C6900FB1101 /* Base */; };
 		96F668182D7D3C6900FB1101 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F668172D7D3C6900FB1101 /* main.m */; };
@@ -80,8 +77,6 @@
 		96DE86692D819B3B00A2C787 /* JHLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHLabel.m; sourceTree = "<group>"; };
 		96DE866A2D819B3B00A2C787 /* RTCSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCSlideView.h; sourceTree = "<group>"; };
 		96DE866B2D819B3B00A2C787 /* RTCSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCSlideView.m; sourceTree = "<group>"; };
-		96DE866F2D819B6500A2C787 /* RTCEngineNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCEngineNative.h; sourceTree = "<group>"; };
-		96DE86702D819B6500A2C787 /* RTCEngineNative.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTCEngineNative.mm; sourceTree = "<group>"; };
 		96DE867A2D819E0500A2C787 /* RtcAnswer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RtcAnswer.h; sourceTree = "<group>"; };
 		96DE867B2D819E0500A2C787 /* RtcAnswer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RtcAnswer.m; sourceTree = "<group>"; };
 		96DE86832D81D2D100A2C787 /* RtcOffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RtcOffer.h; sourceTree = "<group>"; };
@@ -101,10 +96,6 @@
 		96DE87152D8BBB9600A2C787 /* AnswerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnswerManager.h; sourceTree = "<group>"; };
 		96DE87162D8BBB9600A2C787 /* AnswerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnswerManager.m; sourceTree = "<group>"; };
 		96F668092D7D3C6800FB1101 /* rtc_macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rtc_macos.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		96F6680C2D7D3C6800FB1101 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		96F6680D2D7D3C6800FB1101 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		96F6680F2D7D3C6800FB1101 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		96F668102D7D3C6800FB1101 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		96F668122D7D3C6900FB1101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96F668152D7D3C6900FB1101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96F668172D7D3C6900FB1101 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -144,6 +135,21 @@
 				268B47BF083D86DCC433730F /* Pods-rtc_macos.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		965648FF2DA7CDBD00517459 /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				96DE86512D81958400A2C787 /* device */,
+				96DE86642D819B2000A2C787 /* view */,
+				96DE865E2D819B2000A2C787 /* RTCAppDelegate.h */,
+				96DE865F2D819B2000A2C787 /* RTCAppDelegate.m */,
+				96DE86602D819B2000A2C787 /* RTCCameraConsumer.h */,
+				96DE86612D819B2000A2C787 /* RTCCameraConsumer.m */,
+				96DE86622D819B2000A2C787 /* RTCViewController.h */,
+				96DE86632D819B2000A2C787 /* RTCViewController.m */,
+			);
+			path = vc;
 			sourceTree = "<group>";
 		};
 		96DE86292D81832200A2C787 /* include */ = {
@@ -238,39 +244,12 @@
 		96DE86642D819B2000A2C787 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				96F6680F2D7D3C6800FB1101 /* ViewController.h */,
-				96F668102D7D3C6800FB1101 /* ViewController.m */,
-				96DE86732D819B6500A2C787 /* native */,
-				96DE866C2D819B3B00A2C787 /* view */,
-				96DE86512D81958400A2C787 /* device */,
-				96DE865E2D819B2000A2C787 /* RTCAppDelegate.h */,
-				96DE865F2D819B2000A2C787 /* RTCAppDelegate.m */,
-				96DE86602D819B2000A2C787 /* RTCCameraConsumer.h */,
-				96DE86612D819B2000A2C787 /* RTCCameraConsumer.m */,
-				96DE86622D819B2000A2C787 /* RTCViewController.h */,
-				96DE86632D819B2000A2C787 /* RTCViewController.m */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		96DE866C2D819B3B00A2C787 /* view */ = {
-			isa = PBXGroup;
-			children = (
 				96DE86682D819B3B00A2C787 /* JHLabel.h */,
 				96DE86692D819B3B00A2C787 /* JHLabel.m */,
 				96DE866A2D819B3B00A2C787 /* RTCSlideView.h */,
 				96DE866B2D819B3B00A2C787 /* RTCSlideView.m */,
 			);
 			path = view;
-			sourceTree = "<group>";
-		};
-		96DE86732D819B6500A2C787 /* native */ = {
-			isa = PBXGroup;
-			children = (
-				96DE866F2D819B6500A2C787 /* RTCEngineNative.h */,
-				96DE86702D819B6500A2C787 /* RTCEngineNative.mm */,
-			);
-			path = native;
 			sourceTree = "<group>";
 		};
 		96DE86762D819DC600A2C787 /* rtc */ = {
@@ -285,25 +264,25 @@
 			path = rtc;
 			sourceTree = "<group>";
 		};
-		96DE87082D8AA05300A2C787 /* webrtc */ = {
+		96DE87082D8AA05300A2C787 /* p2p */ = {
 			isa = PBXGroup;
 			children = (
+				96DE87152D8BBB9600A2C787 /* AnswerManager.h */,
+				96DE87162D8BBB9600A2C787 /* AnswerManager.m */,
 				96DE86F12D84158C00A2C787 /* ChatRoomController.h */,
 				96DE86F22D84158C00A2C787 /* ChatRoomController.m */,
+				96DE87122D8BBB5900A2C787 /* OfferManager.h */,
+				96DE87132D8BBB5900A2C787 /* OfferManager.m */,
 				96DE86FC2D8A9E5200A2C787 /* PeerConnectionManager.h */,
 				96DE86FD2D8A9E5200A2C787 /* PeerConnectionManager.m */,
+				96DE870F2D8BBB1600A2C787 /* SignalingMessage.h */,
+				96DE87102D8BBB1600A2C787 /* SignalingMessage.m */,
 				96DE86F62D8A9D4B00A2C787 /* WebRTCManager.h */,
 				96DE86F72D8A9D4B00A2C787 /* WebRTCManager.m */,
 				96DE86F92D8A9DB700A2C787 /* WebSocketManager.h */,
 				96DE86FA2D8A9DB700A2C787 /* WebSocketManager.m */,
-				96DE870F2D8BBB1600A2C787 /* SignalingMessage.h */,
-				96DE87102D8BBB1600A2C787 /* SignalingMessage.m */,
-				96DE87122D8BBB5900A2C787 /* OfferManager.h */,
-				96DE87132D8BBB5900A2C787 /* OfferManager.m */,
-				96DE87152D8BBB9600A2C787 /* AnswerManager.h */,
-				96DE87162D8BBB9600A2C787 /* AnswerManager.m */,
 			);
-			path = webrtc;
+			path = p2p;
 			sourceTree = "<group>";
 		};
 		96F668002D7D3C6800FB1101 = {
@@ -327,11 +306,9 @@
 		96F6680B2D7D3C6800FB1101 /* rtc_macos */ = {
 			isa = PBXGroup;
 			children = (
-				96DE87082D8AA05300A2C787 /* webrtc */,
+				965648FF2DA7CDBD00517459 /* vc */,
+				96DE87082D8AA05300A2C787 /* p2p */,
 				96DE86762D819DC600A2C787 /* rtc */,
-				96DE86642D819B2000A2C787 /* view */,
-				96F6680C2D7D3C6800FB1101 /* AppDelegate.h */,
-				96F6680D2D7D3C6800FB1101 /* AppDelegate.m */,
 				96F668122D7D3C6900FB1101 /* Assets.xcassets */,
 				96F6684B2D7D3F9B00FB1101 /* fwk */,
 				96DE865C2D81990600A2C787 /* Info.plist */,
@@ -474,8 +451,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96DE86742D819B6500A2C787 /* RTCEngineNative.mm in Sources */,
-				96F668112D7D3C6800FB1101 /* ViewController.m in Sources */,
 				96DE86652D819B2000A2C787 /* RTCAppDelegate.m in Sources */,
 				96DE867C2D819E0500A2C787 /* RtcAnswer.m in Sources */,
 				96DE86F32D84158C00A2C787 /* ChatRoomController.m in Sources */,
@@ -495,7 +470,6 @@
 				96DE86532D81958400A2C787 /* ARDCaptureController.m in Sources */,
 				96DE87172D8BBB9600A2C787 /* AnswerManager.m in Sources */,
 				96DE86F82D8A9D4B00A2C787 /* WebRTCManager.m in Sources */,
-				96F6680E2D7D3C6800FB1101 /* AppDelegate.m in Sources */,
 				96DE86542D81958400A2C787 /* ARDSettingsModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

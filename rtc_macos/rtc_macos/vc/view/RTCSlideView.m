@@ -39,53 +39,53 @@
     self = [super initWithFrame:frame];
     if (self) {
                 
-        _btnList = [NSMutableArray array];
-        _xrtcBtn = [NSButton buttonWithTitle:@"XRTC" target:self action:@selector(xrtcAct:)];
-        [_xrtcBtn setButtonType:NSButtonTypeSwitch];
-        [self addSubview:_xrtcBtn];
-        [_btnList addObject:_xrtcBtn];
-        
-        _rtmpBtn = [NSButton buttonWithTitle:@"RTMP" target:self action:@selector(rtmpAct:)];
-        [_rtmpBtn setButtonType:NSButtonTypeSwitch];
-        [self addSubview:_rtmpBtn];
-        [_btnList addObject:_rtmpBtn];
-        
-        _playBtn = [NSButton buttonWithTitle:@"PLAY" target:self action:@selector(playAct:)];
-        [_playBtn setButtonType:NSButtonTypeSwitch];
-        [self addSubview:_playBtn];
-        [_btnList addObject:_playBtn];
-        
-        _textField = [[NSTextField alloc] init];
-        _textField.maximumNumberOfLines = 1;
-        _textField.placeholderString = @"XRTC服务";
-        _textField.stringValue = @"www.str2num.com";
-        [self addSubview:_textField];
-        
-        _textUid = [[NSTextField alloc] init];
-        _textUid.maximumNumberOfLines = 1;
-        _textUid.placeholderString = @"UID";
-        _textUid.stringValue = @"1024";
-        [self addSubview:_textUid];
-
+//        _btnList = [NSMutableArray array];
+//        _xrtcBtn = [NSButton buttonWithTitle:@"XRTC" target:self action:@selector(xrtcAct:)];
+//        [_xrtcBtn setButtonType:NSButtonTypeSwitch];
+//        [self addSubview:_xrtcBtn];
+//        [_btnList addObject:_xrtcBtn];
+//        
+//        _rtmpBtn = [NSButton buttonWithTitle:@"RTMP" target:self action:@selector(rtmpAct:)];
+//        [_rtmpBtn setButtonType:NSButtonTypeSwitch];
+//        [self addSubview:_rtmpBtn];
+//        [_btnList addObject:_rtmpBtn];
+//        
+//        _playBtn = [NSButton buttonWithTitle:@"PLAY" target:self action:@selector(playAct:)];
+//        [_playBtn setButtonType:NSButtonTypeSwitch];
+//        [self addSubview:_playBtn];
+//        [_btnList addObject:_playBtn];
+//        
+//        _textField = [[NSTextField alloc] init];
+//        _textField.maximumNumberOfLines = 1;
+//        _textField.placeholderString = @"XRTC服务";
+//        _textField.stringValue = @"www.str2num.com";
+//        [self addSubview:_textField];
+//        
+//        _textUid = [[NSTextField alloc] init];
+//        _textUid.maximumNumberOfLines = 1;
+//        _textUid.placeholderString = @"UID";
+//        _textUid.stringValue = @"1024";
+//        [self addSubview:_textUid];
+//
         _textLiveName = [[NSTextField alloc] init];
         _textLiveName.maximumNumberOfLines = 1;
-        _textLiveName.placeholderString = @"流名称";
+        _textLiveName.placeholderString = @"房间号";
         _textLiveName.stringValue = @"xrtc1024";
         [self addSubview:_textLiveName];
 
-        _startCaptureBtn = [NSButton buttonWithTitle:@"启动摄像头" target:self action:@selector(startCapture:)];
+        _startCaptureBtn = [NSButton buttonWithTitle:@"加入" target:self action:@selector(startCapture:)];
         [_startCaptureBtn setBezelStyle:(NSBezelStyleRegularSquare)];
         [_startCaptureBtn setBezelColor:NSColor.systemBlueColor];
         [self addSubview:_startCaptureBtn];
 
-        _stopCaptureBtn = [NSButton buttonWithTitle:@"关闭摄像头" target:self action:@selector(stopCapture:)];
+        _stopCaptureBtn = [NSButton buttonWithTitle:@"挂断" target:self action:@selector(stopCapture:)];
         [_stopCaptureBtn setBezelStyle:(NSBezelStyleRegularSquare)];
         [_stopCaptureBtn setBezelColor:NSColor.systemBlueColor];
         [self addSubview:_stopCaptureBtn];
         
-        _pushBtn = [NSButton buttonWithTitle:@"开始推流" target:self action:@selector(pushAct:)];
-        [_pushBtn setBezelStyle:(NSBezelStyleRegularSquare)];
-        [self addSubview:_pushBtn];
+//        _pushBtn = [NSButton buttonWithTitle:@"开始推流" target:self action:@selector(pushAct:)];
+//        [_pushBtn setBezelStyle:(NSBezelStyleRegularSquare)];
+//        [self addSubview:_pushBtn];
 
 
     }
@@ -144,29 +144,29 @@
 - (void)updateConstraints {
     [super updateConstraints];
     
-    [_xrtcBtn autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:10.f];
-    [_xrtcBtn autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:10.f];
-    [_xrtcBtn autoSetDimensionsToSize:CGSizeMake(60, 50)];
-
-    [_rtmpBtn autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:_xrtcBtn withOffset:0.f];
-    [_rtmpBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_xrtcBtn withOffset:0.f];
-    [_rtmpBtn autoSetDimensionsToSize:CGSizeMake(60, 50)];
-
-    [_playBtn autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:_rtmpBtn withOffset:0.f];
-    [_playBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_rtmpBtn withOffset:0.f];
-    [_playBtn autoSetDimensionsToSize:CGSizeMake(60, 50)];
-    
-    [_textField autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:10.f];
-    [_textField autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:100.f];
-    [_textField autoSetDimensionsToSize:CGSizeMake(200, 30)];
-
-    [_textUid autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:10.f];
-    // _textUid的ALEdgeTop 相对与_textField的ALEdgeBottom
-    [_textUid autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_textField withOffset:10.f];
-    [_textUid autoSetDimensionsToSize:CGSizeMake(200, 30)];
+//    [_xrtcBtn autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:10.f];
+//    [_xrtcBtn autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:10.f];
+//    [_xrtcBtn autoSetDimensionsToSize:CGSizeMake(60, 50)];
+//
+//    [_rtmpBtn autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:_xrtcBtn withOffset:0.f];
+//    [_rtmpBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_xrtcBtn withOffset:0.f];
+//    [_rtmpBtn autoSetDimensionsToSize:CGSizeMake(60, 50)];
+//
+//    [_playBtn autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:_rtmpBtn withOffset:0.f];
+//    [_playBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_rtmpBtn withOffset:0.f];
+//    [_playBtn autoSetDimensionsToSize:CGSizeMake(60, 50)];
+//    
+//    [_textField autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:10.f];
+//    [_textField autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:100.f];
+//    [_textField autoSetDimensionsToSize:CGSizeMake(200, 30)];
+//
+//    [_textUid autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:10.f];
+//    // _textUid的ALEdgeTop 相对与_textField的ALEdgeBottom
+//    [_textUid autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_textField withOffset:10.f];
+//    [_textUid autoSetDimensionsToSize:CGSizeMake(200, 30)];
 
     [_textLiveName autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:10.f];
-    [_textLiveName autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_textUid withOffset:10.f];
+    [_textLiveName autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:10.f];
     [_textLiveName autoSetDimensionsToSize:CGSizeMake(200, 30)];
 
     [_startCaptureBtn autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:10.f];
@@ -177,10 +177,9 @@
     [_stopCaptureBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_startCaptureBtn withOffset:0.f];
     [_stopCaptureBtn autoSetDimensionsToSize:CGSizeMake(100, 50)];
 
-    [_pushBtn autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:10.f];
-    [_pushBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_startCaptureBtn withOffset:20.f];
-    [_pushBtn autoSetDimensionsToSize:CGSizeMake(100, 50)];
-
+//    [_pushBtn autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:10.f];
+//    [_pushBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_startCaptureBtn withOffset:20.f];
+//    [_pushBtn autoSetDimensionsToSize:CGSizeMake(100, 50)];
 
 }
 - (void)drawRect:(NSRect)dirtyRect {
