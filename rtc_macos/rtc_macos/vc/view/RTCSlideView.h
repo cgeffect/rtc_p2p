@@ -22,6 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RTCSlideView : NSView
 @property (nonatomic, weak) id<RTCSlideViewDelegate> delegate;
+@property (nonatomic, copy) void (^startCapture)(void);
+@property (nonatomic, copy) void (^stopCapture)(void);
+
 @end
 
 NS_ASSUME_NONNULL_END

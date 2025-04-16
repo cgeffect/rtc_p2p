@@ -92,6 +92,14 @@ import SocketIO
             guard let candidate = data[0] as? [String: Any] else { return }
             print("onMessage: \(data)")
 //            self?.delegate?.didMessage(data)
+            // 这里 解析协议, 判断收到的消息的类型, 是offer 还是answer
+//            self?.delegate?.didReceiveOffer(candidate)
+//            
+//            self?.delegate?.didReceiveAnswer(candidate)
+//            
+//            self?.delegate?.didReceiveCandidate(candidate)
+            
+            self?.delegate?.didMessage(candidate)
         }
         
         // 连接到服务器

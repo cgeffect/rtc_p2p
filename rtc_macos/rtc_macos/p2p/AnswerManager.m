@@ -7,6 +7,22 @@
 
 #import "AnswerManager.h"
 
+static NSString * const kARDMediaStreamId = @"ARDAMS";
+static NSString * const kARDAudioTrackId = @"ARDAMSa0";
+static NSString * const kARDVideoTrackId = @"ARDAMSv0";
+static NSString * const kARDVideoTrackKind = @"video";
+
+@interface AnswerManager ()
+{
+    RTCMTLNSVideoView *_localVideoView;
+    RTCMTLNSVideoView *_remoteVideoView;
+
+    RTCAudioTrack *audioTrack;
+    RTCVideoTrack *videoTrack;
+    RTCCameraVideoCapturer *cameraCapturer;
+}
+@end
+
 @implementation AnswerManager
 
 - (instancetype)initWithFactory:(RTCPeerConnectionFactory *)factory
@@ -25,28 +41,35 @@
 }
 
 - (void)createLocalStream {
+    _localVideoView = [[RTCMTLNSVideoView alloc] initWithFrame:NSMakeRect(0, 0, 640, 480)];
+    _remoteVideoView = [[RTCMTLNSVideoView alloc] initWithFrame:NSMakeRect(0, 0, 640, 480)];
+
     RTC_OBJC_TYPE(RTCMediaConstraints) *constraints = [self defaultMediaAudioConstraints];
 
-    self.localMediaStream = [self.factory mediaStreamWithStreamId:@"ARDAMS"];
+//    self.localMediaStream = [self.factory mediaStreamWithStreamId:kARDMediaStreamId];
     RTCAudioSource *audioSource = [self.factory audioSourceWithConstraints:constraints];
-    RTCAudioTrack *audioTrack = [self.factory audioTrackWithSource:audioSource trackId:@"ARDAMSa0"];
-    [self.localMediaStream addAudioTrack:audioTrack];
+    audioTrack = [self.factory audioTrackWithSource:audioSource trackId:kARDAudioTrackId];
+//    [self.localMediaStream addAudioTrack:audioTrack];
 
     RTCVideoSource *videoSource = [self.factory videoSource];
-    RTCCameraVideoCapturer *cameraCapturer = [[RTCCameraVideoCapturer alloc] initWithDelegate:videoSource];
+    cameraCapturer = [[RTCCameraVideoCapturer alloc] initWithDelegate:videoSource];
     AVCaptureDevice *device = [RTCCameraVideoCapturer captureDevices][0];
     [cameraCapturer startCaptureWithDevice:device format:[RTCCameraVideoCapturer supportedFormatsForDevice:device][0] fps:30];
-    RTCVideoTrack *videoTrack = [self.factory videoTrackWithSource:videoSource trackId:@"ARDAMSv0"];
-    [self.localMediaStream addVideoTrack:videoTrack];
+    videoTrack = [self.factory videoTrackWithSource:videoSource trackId:kARDVideoTrackId];
+//    [self.localMediaStream addVideoTrack:videoTrack];
 }
 
 - (void)handleOffer:(RTCSessionDescription *)offer {
     RTC_OBJC_TYPE(RTCMediaConstraints) *constraints = [self defaultPeerConnectionConstraints];
     RTCConfiguration *configuration = [[RTCConfiguration alloc] init];
+    configuration.sdpSemantics = RTCSdpSemanticsUnifiedPlan;
+    
     configuration.iceServers = @[[[RTCIceServer alloc] initWithURLStrings:@[@"stun:stun.l.google.com:19302"]]];
     self.peerConnection = [self.factory peerConnectionWithConfiguration:configuration constraints:constraints delegate:self];
-    [self.peerConnection addStream:self.localMediaStream];
-
+//    [self.peerConnection addStream:self.localMediaStream];
+    [self.peerConnection addTrack:audioTrack streamIds:@[kARDMediaStreamId]];
+    [self.peerConnection addTrack:videoTrack streamIds:@[kARDMediaStreamId]];
+    
     [self.peerConnection setRemoteDescription:offer completionHandler:^(NSError * _Nullable error) {
         if (error) {
             NSLog(@"Error setting remote description: %@", error);
@@ -67,6 +90,20 @@
             }];
         }];
     }];
+}
+
+- (void)stopCall {
+    [cameraCapturer stopCaptureWithCompletionHandler:^{
+            
+    }];
+}
+
+- (RTCMTLNSVideoView *)getLocalVideoView {
+    return _localVideoView;
+}
+
+- (RTCMTLNSVideoView *)getRemoteVideoView {
+    return _remoteVideoView;
 }
 
 - (RTC_OBJC_TYPE(RTCMediaConstraints) *)defaultMediaAudioConstraints {

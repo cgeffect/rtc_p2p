@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) RTCPeerConnectionFactory *factory;
 @property (nonatomic, strong) RTCPeerConnection *peerConnection;
-@property (nonatomic, strong) RTCMediaStream *localMediaStream;
+//@property (nonatomic, strong) RTCMediaStream *localMediaStream;
 @property (nonatomic, strong) NSString *roomId;
 @property (nonatomic, strong) NSString *userId;
 @property (nonatomic, weak) id<PeerConnectionManagerDelegate> delegate;
@@ -26,6 +26,11 @@ NS_ASSUME_NONNULL_BEGIN
                        delegate:(id<PeerConnectionManagerDelegate>)delegate;
 
 - (void)handleOffer:(RTCSessionDescription *)offer;
+
+- (void)stopCall;
+
+- (RTCMTLNSVideoView *)getLocalVideoView;
+- (RTCMTLNSVideoView *)getRemoteVideoView;
 
 @end
 

@@ -1,7 +1,23 @@
-macos 编译好的文件
+macos 编译好 WebRTC.xcframework 的文件
 https://github.com/stasel/WebRTC/releases
 
 通信流程:
 1. App既是offer, 又是answer, 参考微信, 微信客户端既可以发起主叫, 又可以接听, 发起主叫的一端是offer, 接收的一端是answer. 通过发起还是接听的按钮区分是offer还是answer
-2. ice的流畅, 创建offer->设置自己的sdp, 把自己sdp发送给answer, answer收到sdp之后, 先设置远端的sdp,创建answer, 设置自己的sdp, 把自己的sdp发送给offer.
+2. ice的流程, 创建offer->设置自己的sdp, 把自己sdp发送给answer, answer收到sdp之后, 先设置远端的sdp,创建answer, 设置自己的sdp, 把自己的sdp发送给offer.
     offer收到远端的sdp, 设置远端的sdp. 收集自己的候选者, 把offer的候选者发送给answer, answer收到候选者之后, 设置offer的候选者, 再把answer的候选者发送给offer, offer收到answer的候选者之后, 设置answer的候选者, 至此连接建立, 可以发送消息了
+
+
+先把offer 和 answer 两个程序分开
+1. 双方先加入房间, 拿到批次的socketId
+2. 谁先点击通话按钮, 谁就是offer, offer把自己的sdp信息发送到服务端, 服务端拿到之后把sdp信息再推送到answer
+3. answer拿到sdp之后, 先设offer的sdp, 然后再创建answer的sdp, 再把自己的sdp发送给服务端
+4. 服务端拿到answer的sdp之后, 把sdp推送到offer端, offer端拿到answer的sdp之后, 设置answer的sdp
+到此完成sdp的交换
+
+候选者的交换
+1. 由offer方发起, 把自己的candidate发送到服务端
+2. 服务端拿到candidate之后, 负责把offer的candidate发送到answer端
+3. answer端收到candidate之后, 设置offer的candidate, 然后把自己的candidate发送到服务端
+4. 服务端把answer的candidate发送到offer端
+5. offer端收到answer的candidate之后, 设置answer的candidate
+到此完成candidate的交换

@@ -117,13 +117,11 @@
 }
 
 - (void)startCapture:(NSButton *)btn {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(startCapture)]) {
-        [self.delegate startCapture];
-    }
+    _startCapture();
 }
 
 - (void)stopCapture:(NSButton *)btn {
-    
+    _stopCapture();
 }
 
 - (void)pushAct:(NSButton *)btn {
